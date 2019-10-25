@@ -58,8 +58,9 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 
 //keys
 document.addEventListener("keydown",function(event){
-  if(event.key == 'w' || event.key == 'a' || event.key == 's' || event.key == 'd' || event.key == 'j' || event.key == 'k' || event.key == 'l'){
-    playSound(event.key);
-    buttonAnimation(event.key);
+  var eventKey = event.key.toLowerCase();
+  if(eventKey == 'w' || eventKey == 'a' || eventKey == 's' || eventKey == 'd' || eventKey == 'j' || eventKey == 'k' || eventKey == 'l'){
+    playSound(eventKey);
+    buttonAnimation(eventKey);
   }
 })
